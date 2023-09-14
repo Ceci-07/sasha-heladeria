@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: 'public sans', sans-serif;
+    min-height: 100%;
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "header"
+                          "navbar"
+                          "navbar-2"
+                          "main"
+                          "sidebar"
+                          "footer";
+}
+.header{
+    grid-area: header;
+    
+}
+.header img{
+    width: 40px;
+    margin: 2px;
+    border: 2px solid rgba(236, 12, 180, 0.116);  
+}
+.header a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.header a:hover{
+    color: chocolate;
+}
+.navbar{
+     display: grid;
+     grid-area: navbar;
+}
+.navbar h2{
+    color: chocolate;
+    
+}
+.navbar a{
+    color: black;
+    font-weight: bold;
+}
+.navbar a:hover{
+    color: white;
+}
+.navbar .porciondetorta{
+    background-image: url('./img/porciondetorta.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.navbar-2{
+    grid-area: navbar-2;
+    background-image: url('img/arestherhelados-1666190621874.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.navbar-2 h2{
+    color:chocolate;
+}
+.navbar-2 a{
+    color: black;
+    font-weight: bold;
+}
+.navbar-2 a:hover{
+    color: white;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-image: url('img/header-pedidos-heladeria.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.sidebar .carta-de-recomendación{
+    color: chocolate;
+    font-weight: bold;
+}
+.sidebar div{
+    color: black;
+    font-weight: bold;
+}
+.sidebar div:hover{
+    color: white;
+}
+.main{
+    grid-area: main;
+    background-image: url('img/recoleta-home-1-1622747121591.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.main a{
+    color: chocolate;
+    font-weight: bold;
+    text-decoration: none; 
+}
+.main div{
+    color: black;
+    font-weight: bold;
+}
+.main div:hover{
+    color: white;
+}
+.footer{
+    grid-area: footer;
+    background-image: url('img/images.jpg');
+    color: black;
+    font-weight: bold; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+}
+
+@media (min-width:600px){
+    .grid-container{
+        background-color:rgba(128, 128, 128, 0.356);
+        grid-template-areas: 
+            "header header"
+            "navbar navbar-2"
+            "sidebar main"
+            "footer footer";
+        grid-template-columns: 350px auto;
+        grid-template-rows: 120px 250px auto 60px;   
+    }
+
+}
